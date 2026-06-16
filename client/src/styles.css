@@ -1,0 +1,220 @@
+body {
+  background: black;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.app {
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.color1 {
+  background: #3d3d3d;
+}
+
+.color2 {
+  background: #4a0e66;
+}
+
+.color3 {
+  background: #680099;
+}
+
+.color4 {
+  background: #9000d4;
+}
+
+.color5 {
+  background: #bd30ff;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 14px;
+}
+
+.theme-toggle {
+  color: white !important;
+  background-color: #242424 !important;
+  border-radius: 6px !important;
+}
+
+.heatmap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: fit-content;
+  padding: 12px;
+  background: black;
+  border-radius: 8px;
+}
+
+.heatmap-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.heatmap-row {
+  display: flex;
+  gap: 4px;
+}
+
+.heatmap-cell {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  flex: 0 0 auto;
+  transition: opacity 0.1s ease;
+}
+
+/* Highlighted when its legend level is hovered. Border-box keeps the size. */
+.heatmap-cell.highlight {
+  border-color: #ffffff;
+}
+
+/* Cells that don't match the hovered legend level are faded out. */
+.heatmap-cell.dimmed {
+  opacity: 0.25;
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.heatmap-legend .heatmap-cell {
+  cursor: pointer;
+}
+
+.heatmap-legend-label {
+  font-size: 12px;
+  color: #9a9a9a;
+}
+
+.heatmap-legend-label:first-child {
+  margin-right: 2px;
+}
+
+.heatmap-legend-label:last-child {
+  margin-left: 2px;
+}
+
+.heatmap-status,
+.heatmap-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  gap: 6px;
+  width: 520px;
+  max-width: 100%;
+  min-height: 200px;
+  padding: 24px;
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.heatmap-error-icon {
+  color: #bd30ff;
+  font-size: 40px !important;
+}
+
+.heatmap-error-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.heatmap-error-subtitle {
+  font-size: 13px;
+  color: #9a9a9a;
+  max-width: 320px;
+}
+
+.year-picker {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  background-color: #242424;
+  border-radius: 6px;
+  color: white;
+}
+
+.select {
+  background-color: #242424;
+  border-radius: 6px;
+}
+
+/* ---------- Light mode ---------- */
+/* Bright (white) background with a green color scale for the heatmap. */
+body.light {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+body.light .app {
+  color: #1a1a1a;
+}
+
+body.light .color1 {
+  background: #ebedf0;
+}
+
+body.light .color2 {
+  background: #9be9a8;
+}
+
+body.light .color3 {
+  background: #40c463;
+}
+
+body.light .color4 {
+  background: #30a14e;
+}
+
+body.light .color5 {
+  background: #216e39;
+}
+
+body.light .heatmap {
+  background: #ffffff;
+}
+
+/* On a light grid a white border is invisible, so highlight with a dark one. */
+body.light .heatmap-cell.highlight {
+  border-color: #1a1a1a;
+}
+
+body.light .heatmap-legend-label {
+  color: #57606a;
+}
+
+body.light .heatmap-status,
+body.light .heatmap-error {
+  background: #f6f8fa;
+  border-color: #d0d7de;
+}
+
+body.light .heatmap-error-icon {
+  color: #cf222e;
+}
+
+body.light .heatmap-error-subtitle {
+  color: #57606a;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "cyera-github",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "install-packages": "cd client && npm i && cd ../ && cd server && npm i && cd ../"
+  },
+  "stackblitz": {
+    "startCommand": "npm run install-packages"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

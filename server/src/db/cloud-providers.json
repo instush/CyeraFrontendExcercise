@@ -1,0 +1,22 @@
+[
+  {
+    "id": "98a2779a040f9",
+    "name": "AWS",
+    "secretCredentials": "061c567f998b1"
+  },
+  {
+    "id": "e14388fffbcc8",
+    "name": "Azure",
+    "secretCredentials": "fad47a3b17ae5"
+  },
+  {
+    "id": "a03b8d7758e48",
+    "name": "GCP",
+    "secretCredentials": "44deca3c62205"
+  },
+  {
+    "id": "f50cc423d3e21",
+    "name": "Microsoft365",
+    "secretCredentials": "7f741d9d4c96a"
+  }
+]
