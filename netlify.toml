@@ -1,0 +1,15 @@
+# Netlify build config. The frontend lives in the client/ subdirectory of this
+# monorepo, so Netlify must build and publish from there (otherwise it serves
+# the repo root, which has no index.html -> 404 on the homepage).
+[build]
+  base = "client"
+  command = "npm run build"
+  # Relative to `base`, i.e. client/dist
+  publish = "dist"
+
+# Single-page app fallback: serve index.html for any path so client-side
+# navigation / direct links don't 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
